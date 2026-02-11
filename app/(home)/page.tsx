@@ -276,10 +276,10 @@ const HomePage = () => {
           <Column
             images={[
               VERimages[3],
-              VERimages[4],
               VERimages[5],
+              VERimages[0],
               VERimages[3],
-              VERimages[4],
+              VERimages[11],
             ]}
             y={y2}
           />
@@ -377,6 +377,16 @@ const HomePage = () => {
             fontClassName={aboutNPfont2.className}
           />
         </div>
+        <div className={`relative text-6xl max-sm:text-3xl font-bold text-center text-black ${aboutNPfont11.className}`}>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdoaklR5iDSMtXeUXZPnPgvAqTQSZ5w_0i9wLve5jx1SQ5nyg/viewform?usp=header">
+                <button
+                  className="border-2 home-card-text-outline text-white hover:bg-white hover:text-black transition-all duration-300 font-medium px-10 py-2 rounded-full "
+                  data-cursor-hover
+                >
+                  Click here to Register
+                </button>
+              </Link>
+            </div>
 
         {/* 5 - Scaled Images Container */}
         <div ref={imagescontainer} className="h-[300vh] relative mb-3">

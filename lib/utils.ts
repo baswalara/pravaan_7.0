@@ -55,7 +55,7 @@ export const navItems = [
   },
   {
     name: "Events",
-    link: "/pdf/event brochure.pdf",
+    link: "/pdf/event brochure 2.pdf",
   },
   {
     name: "Team",
