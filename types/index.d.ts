@@ -3,6 +3,18 @@
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Home Page Types 
 
+export interface EventCardType {
+  imageUrl: string;
+  title: string;
+  description: string;
+  location: string;
+  price: string;
+}
+
+export interface DayDataType {
+  day: string;
+  cards: EventCardType[];
+}
 
 
 interface ColumnProps {
@@ -20,14 +32,14 @@ interface CardProps {
   };
 }
 
-export interface Event  {
+export interface Event {
   name: string;
   imageUrl: string;
 };
 
 
 
-export interface CardStackedProps  {
+export interface CardStackedProps {
   scrollYProgress: any;
 };
 
@@ -37,16 +49,17 @@ export interface CardStackedProps  {
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-interface EventDetail {
-    id: string;
-    title: string;
-    description: string;
-    date: string;
-    location: string;
-    organizer: string;
-    spellCategory: string;
-    Fee: string;
-    maxParticipants: number;
-    currentParticipants: number;
-    imageUrl: string;
-  }
+
+export interface EventDetail {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  location: string;
+  organizer: string;
+  spellCategory: string;
+  Fee: string;
+  maxParticipants: number;
+  currentParticipants: number;
+  imageUrl: string;
+}

@@ -13,7 +13,7 @@ const Section1 = ({ scrollYProgress }: { scrollYProgress: any }) => {
         >
           <div className="relative flex w-full flex-col items-center justify-center">
             <img
-              src="./Exodiaa.PNG"
+              src="./pdf/Exodiaa.PNG"
               alt="Exodiaa"
               className="w-[90%] md:w-[70%] max-w-4xl h-auto object-contain"
             />

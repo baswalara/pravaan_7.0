@@ -17,7 +17,7 @@ const Page: React.FC = () => {
 
       <FloatingNav  namex="P" className="max-md:hidden" />
       <main>
-      <ScheduleSectionPihu />
+      {/* <ScheduleSectionPihu /> */}
       </main>
       <Footer />
     </div>

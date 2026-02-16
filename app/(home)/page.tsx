@@ -508,7 +508,7 @@ const HomePage = () => {
             className="flex overflow-hidden sticky top-0 h-screen items-center justify-center"
           >
             <video autoPlay muted loop className="h-screen w-full object-cover">
-              <source src="/assets/homefifth/mdi.mp4" type="video/mp4" />
+              <source src="../../assets/homefifth/mdi.mp4" type="video/mp4" />
             </video>
           </div>
         </div>

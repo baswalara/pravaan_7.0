@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import {
   Sheet,
@@ -81,18 +82,17 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`home-card-text-outline z-[980] fixed top-0 h-[60px] left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300 ${
-        isVisible ? "sm:translate-y-0" : "sm:-translate-y-full"
-      }`}
+      className={`home-card-text-outline z-[980] fixed top-0 h-[60px] left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300 ${isVisible ? "sm:translate-y-0" : "sm:-translate-y-full"
+        }`}
     >
       <div className="flex justify-between items-center px-6 md:px-10">
         {/* Logo */}
-        <a
+        <Link
           href="/"
           className={` font-semibold text-[2.5rem] text-white ${aboutNPfont11.className}`}
         >
           Prayaan 7.0
-        </a>
+        </Link>
 
         {/* Navbar Links */}
         <nav className="hidden sm:flex flex-row items-center space-x-6">
@@ -100,16 +100,16 @@ const Navbar: React.FC = () => {
             <div
               key={item.name}
               className="relative group p-2"
-              // onMouseEnter={() => item.subItems && toggleDropdown(index)}
-              // onMouseLeave={() => item.subItems && toggleDropdown(null)}
+            // onMouseEnter={() => item.subItems && toggleDropdown(index)}
+            // onMouseLeave={() => item.subItems && toggleDropdown(null)}
             >
               <div className="flex">
-                <a
+                <Link
                   href={item.link}
                   className={`text-xl text-white transition ${aboutNPfont11.className}`}
                 >
                   {item.name}
-                </a>
+                </Link>
                 {/* {item.subItems && (
                   <Image src="/icons/custom/dropdown.svg" alt="Arrow Down" width={20} height={20} style={{ filter: 'invert(1)' }} />
                 )} */}

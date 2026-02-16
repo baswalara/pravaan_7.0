@@ -1,4 +1,4 @@
-import { EventDetail } from "@/types";
+import { EventDetail, DayDataType } from "@/types";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -9,44 +9,10 @@ export function cn(...inputs: ClassValue[]) {
 export const sleep = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
-// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-// HOME PAGE UTILS
-
-// export const navItems = [
-//   {
-//     name: "Events",
-//     link: "/events",
-//   },
-//   {
-//     name: "Schedule",
-//     link: "/schedule",
-//   },
-//   {
-//     name: "Gallery",
-//     link: "/gallery",
-//   },
-//   {
-//     name: "Announcements",
-//     link: "/announcements",
-//   },
-//   {
-//     name: "Sponsors",
-//     link: "/sponsors",
-//   },
-//   {
-//     name: "About",
-//     link: "/about",
-//   },
-//   {
-//     name: "Team",
-//     link: "/team",
-//   },
-//   {
-//     name: "Contact",
-//     link: "/contact",
-//   },
-// ];
+export const eventDetails: EventDetail[] = [
+  // your event details here
+];
+export const cardData: DayDataType[] = [];
 
 export const navItems = [
   {
@@ -66,7 +32,39 @@ export const navItems = [
     link: "/contact",
   },
 ];
-
+export const faqquestions = [
+  {
+    question: "What is PRAYAAN?",
+    answer:
+      "PRAYAAN is the largest maritime fest organized by Indian Maritime University, Mumbai Port Campus. It's a high-voltage, two-day explosion of creativity, competition, and passion featuring technical events, cultural performances, and more.",
+  },
+  {
+    question: "When is PRAYAAN 7.0?",
+    answer:
+      "Please check our official announcements for the exact dates of PRAYAAN 7.0.",
+  },
+  {
+    question: "Who can participate?",
+    answer:
+      "Students from various colleges and universities can participate in PRAYAAN events.",
+  },
+  {
+    question: "How do I register?",
+    answer:
+      "Registration details will be available on our official website and social media channels.",
+  },
+  {
+    question: "What events are included?",
+    answer:
+      "PRAYAAN features Technical Paper Presentation, Boat Race, Esports, Cultural Events including live art battles and Band Wars, and more.",
+  },
+  {
+    question: "Is there an entry fee?",
+    answer:
+      "Entry fee details vary by event. Please check the event brochure for specific information.",
+  },
+  // Add more FAQ items as needed
+];
 export const videoLinks: Record<number, [string, string]> = {
   2016: [
     "https://youtu.be/n8Qkbruh8XE?si=FGoYzcI9bY1ZR81-",
@@ -200,12 +198,18 @@ export const teamsList = [
   },
   {
     id: "team11",
-    name: "Finanace Team ",
+    name: "Finance Team ",
     members: [
       {
         name: "Swaroop Baad",
         photo:
           "https://github.com/aariivermaaa-cloud/PRAYAAN-7.0/blob/main/contact%20us/Swaroop%20Baad.jpeg?raw=true",
+        socialMediaLinks: [],
+      },
+      {
+        name: "Vishesh Singh",
+        photo:
+          "https://github.com/aariivermaaa-cloud/PRAYAAN-7.0/blob/main/contact%20us/Vishesh%20Singh.jpeg?raw=true",
         socialMediaLinks: [],
       },
       {
@@ -275,33 +279,38 @@ export const announcements = [
 export const projects = [
   {
     name: "Technical Paper Presentation",
-    imageUrl: "/assets/cards/mex.png",
+    imageUrl: "./assets/cards/mex.png",
     description:
       "Ideas take the spotlight. Intellect takes the lead. PRAYAAN’s Technical Paper Presentation is where innovation meets insight and concepts turn into conversations. Step up, challenge perspectives, and let your research speak—because tomorrow’s breakthroughs begin with your paper today.",
     descriptionClass: "font-prayaan",
   },
   {
     name: "Boat Race",
-    imageUrl: "/assets/cards/cs.jpeg",
+    imageUrl: "./assets/cards/cs.jpeg",
     description:
       "Design, build, and race your own RC boat. Test your hull stability and piloting skills in a high-speed battle against the waves. Only the most efficient design will survive the course to claim victory.",
     descriptionClass: "font-prayaan",
   },
   {
     name: "Esports",
-    imageUrl: "/assets/cards/mush.jpeg",
+    imageUrl: "./assets/cards/mush.jpeg",
     description:
       "PRAYAAN E-SPORTS is where split-second decisions, clutch plays, and pure adrenaline collide. Enter the arena, outplay the best, and prove your dominance—because legends aren’t born… they’re respawned here.",
     descriptionClass: "font-prayaan",
   },
   {
     name: "Cultural Events",
-    imageUrl: "/assets/cards/mnscc.jpeg",
+    imageUrl: "./assets/cards/mnscc.jpeg",
     description:
       "The cultural showdown of Prayaan 7.0 kicks off with a live brush battle as artists race against time. It then heats up with electrifying Band Wars, before the stage opens to individual performers to showcase their unique brilliance.",
     descriptionClass: "font-prayaan",
   },
 ];
+
+export const eventcards = projects.map((project) => ({
+  ...project,
+  title: project.name,
+}));
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // horizontal scroll on scroll list
